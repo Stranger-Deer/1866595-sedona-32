@@ -27,6 +27,7 @@ body {
   line-height: 26px;
   color: #333333;
   background-color: #F2F2F2;
+  margin: 0;
 }
 
 input {
@@ -48,6 +49,7 @@ input {
   background-color: #83B3D3;
   text-decoration: none;
   text-transform: uppercase;
+  width: 160px;
 }
 
 .button-search {
@@ -85,6 +87,7 @@ input {
   font-size: 18px;
   line-height: 23px;
   text-align: center;
+  margin-top: 20px;
 }
 
 h2 {
@@ -292,6 +295,7 @@ text-align: center;
 
 .inner-header {
 color: #FFFFFF;
+margin-left: 72px;
 }
 
 .inner-header-title {
@@ -303,6 +307,7 @@ line-height: 78px;
 
 .breadcrumbs {
   font-size: 16px;
+  list-style: none;
 }
 
 .breadcrumbs-link {
@@ -311,6 +316,34 @@ line-height: 78px;
 
 .filters{
 color: #FFFFFF;
+}
+
+.catalog-filter{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+}
+
+.catalog-filter-infrastruction {
+  width: 150px;
+  margin-left: 72px;
+}
+
+.catalog-filter-housing {
+  width: 150px;
+}
+
+.catalog-filter-price{
+  width: 278px;
+}
+
+.catalog-filter-buttons{
+  display: flex;
+  flex-direction: column;
+  margin-right: 72px;
+  align-items: 20px;
+
 }
 
 .catalog-filter-title {
@@ -335,6 +368,9 @@ color: #FFFFFF;
   line-height: 39px;
 }
 
+.product-list{
+  list-style: none;
+}
 .product-card-link {
   text-decoration: none;
 }
@@ -366,6 +402,7 @@ color: #FFFFFF;
 
  .pagination {
    background-color: #FFFFFF;
+   list-style: none;
  }
 
  .pagination-link {
@@ -388,4 +425,5 @@ color: #FFFFFF;
 
 .newsletter-inner {
   text-align: center;
+  background-color: #FFFFFF;
 }
