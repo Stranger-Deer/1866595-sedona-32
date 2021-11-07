@@ -12,7 +12,7 @@
        <nav class="navigation">
          <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Главная</a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
@@ -141,8 +141,8 @@
 
       <section class="sorting">
         <h2 class="visually-hidden" hidden>Cортировка</h2>
+          <p class="results">Найдено гостиниц: 38 </p>
         <form class="sorting-type">
-        <p class="results">Найдено гостиниц: 38 </p>
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
             <option value="popular">Сначала популярное</option>
@@ -152,6 +152,7 @@
           <button class="visually-hidden" type="submit">Отсортировать продукты</button>
         </form>
 
+      <div class="sorting-view">
        <a href="#" class="icon-button button">
          <span class="visually-hidden">Показать карточки</span>
        </a>
@@ -161,6 +162,7 @@
       <a href="#" class="icon-button button">
         <span class="visually-hidden">Показать список</span>
       </a>
+    </div>
      </section>
 
      <section class="catalog">
@@ -168,12 +170,12 @@
           <li class="product-card">
             <a class="product-card-link" href="product.html">
               <img class="product-card-image" src="img/hotel-1.jpg" width="180" height="120" alt="Amara Resort & Spa">
-              <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
-            <span class="product-card-type">Гостиница </span>
-            <span class="product-card-price">от 4000 ₽</span>
-            <a href="#" class="more-button button">Подробнее</a>
-            <a href="#" class="favorites-button button">В избранное</a>
+              <h3 class="product-card-title">Amara Resort & Spa</h3>
+              <span class="product-card-type">Гостиница </span>
+              <span class="product-card-price">от 4000 ₽</span>
+              <a href="#" class="more-button button">Подробнее</a>
+              <a href="#" class="favorites-button button">В избранное</a>
             <img class="stars" src="#" alt="">
             <p class="rating"> Рейтинг: 8,5</p>
           </li>
@@ -181,8 +183,8 @@
           <li class="product-card">
             <a class="product-card-link" href="product.html">
               <img class="product-card-image" src="img/hotel-2.jpg" width="180" height="120" alt="Desert Quail Inn">
-              <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
+            <h3 class="product-card-title">Desert Quail Inn</h3>
             <span class="product-card-type">Мотель </span>
             <span class="product-card-price">от 3000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
@@ -194,8 +196,8 @@
           <li class="product-card">
             <a class="product-card-link" href="product.html">
               <img class="product-card-image" src="img/hotel-3.jpg" width="180" height="120" alt="Villas at Poco Diablo">
-              <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
+            <h3 class="product-card-title">Villas at Poco Diablo</h3>
             <span class="product-card-type">Апартаменты </span>
             <span class="product-card-price">от 2000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
@@ -207,8 +209,8 @@
           <li class="product-card">
             <a class="product-card-link" href="product.html">
               <img class="product-card-image" src="img/hotel-4.jpg" width="180" height="120" alt="GreenTree Inn">
-              <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
+            <h3 class="product-card-title">GreenTree Inn</h3>
             <span class="product-card-type">Гостиница </span>
             <span class="product-card-price">от 3000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
@@ -217,9 +219,10 @@
             <p class="rating"> Рейтинг: 9,2</p>
           </li>
       </ul>
-          <button class="button" type="button">Загрузить ещё</button>
+          <button class="button-load button" type="button">Загрузить ещё</button>
      </section>
 
+     <div class="pagination-container">
      <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -240,16 +243,19 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-        <label for="number">Гостиниц на странице</label>
-        <select class="select-control" id="number" name="number">
-          <option value="4">4</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
+        <div class="pagination-view">
+          <label for="number">Гостиниц на странице</label>
+          <select class="select-control" id="number" name="number">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+      </div>
 
         <section class="newsletter-inner">
-            <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-              <p>Только полезная информация и никакого спама,честное бойскаутское!</p>
+            <h2 class="newsletter-title-inner">Подпишитесь на рассылку</h2>
+              <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
                 <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                  <label for="newsletter-email">Ваш e-mail</label>
                     <input type="text" id="newsletter-email" name="email">
@@ -261,7 +267,7 @@
 
     <footer class="page-footer">
       <section class="footer-social">
-        <h2 class="page-footer-title">Социальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="#">
