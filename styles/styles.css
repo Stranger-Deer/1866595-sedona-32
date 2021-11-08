@@ -160,10 +160,16 @@ margin: 0;
  text-align: center;
  text-decoration: none;
 }
+.user-nav {
+  margin: 0 20px 0 0;
+}
+
+.user-nav:nth-child(3n) {
+  margin-right: 0;
+}
 
 .user-link{
 display: block;
-margin-right: 20px;
 width: 38px;
 height: 38px;
 text-decoration: none;
@@ -365,14 +371,19 @@ text-transform: uppercase;
 }
 
 .footer-social-item {
-  width: 40px;
-  height: 40px;
   margin-right: 4px;
   margin-bottom: 4px;
 }
 
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.social-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+
 }
 
 .footer-contacts{
