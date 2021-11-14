@@ -73,6 +73,7 @@ input {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
+  width: 151px;
 }
 
 .favorites-button{
@@ -450,11 +451,11 @@ padding: 0 72px 83px 72px;
 }
 
 .catalog-filter-infrastruction {
-  width: 150px;
+
 }
 
 .catalog-filter-housing {
-  width: 150px;
+
 }
 
 .catalog-filter-price{
@@ -474,6 +475,10 @@ padding: 0 72px 83px 72px;
   line-height: 26px;
 }
 
+.catalog-filter-list{
+  list-style: none;
+}
+
 .control-label {
   font-size: 18px;
   line-height: 23px;
@@ -486,6 +491,7 @@ padding: 0 72px 83px 72px;
   background-color: #FFFFFF;
   margin-left: 72px ;
   margin-right: 72px;
+  margin-bottom: 42px;
 
 }
 
@@ -493,11 +499,31 @@ padding: 0 72px 83px 72px;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
+  margin: 0;
 }
 
 .sorting-view{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sorting-icon {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.sorting-icon:nth-child(3n) {
+  margin-right: 0;
+}
+
+.icon-button{
+  display: block;
+  width: 48px;
+  height: 48px;
 }
 
 .product-list{
@@ -511,17 +537,27 @@ padding: 0 72px 83px 72px;
 
 .product-card{
   display:grid;
-  grid-template-columns: 180px 1fr 160px;
-
+  grid-template-columns: 180px 36px 151px 8px 160px 1fr 160px;
+  grid-template-rows: 31px 23px 31px 37px;
+  grid-template-areas:
+  "card-image .card-title card-title card-title . card-stars"
+  "card-image .card-type . card-price . ."
+  "card-image . . . . . ."
+  "card-image . more-btn . favorites-btn . card-rating"
 }
 
 .product-card-link {
   text-decoration: none;
 }
 
+.product-card-image {
+  grid-area: card-image;
+}
 
 
 .product-card-title {
+  grid-area: card-title;
+  margin: 0;
   color: #000000;
   font-weight: 700;
   font-size: 24px;
@@ -529,15 +565,32 @@ padding: 0 72px 83px 72px;
 }
 
 .product-card-type {
+  grid-area: card-type;
   font-size: 18px;
   line-height: 23px;
 }
 
 .product-card-price {
+  grid-area: card-price;
   font-size: 18px;
   line-height: 23px;
 }
+
+.more-button {
+  grid-area: more-btn;
+}
+
+.favorites-button, .favorites-button-active {
+  grid-area: favorites-btn;
+
+}
+
+.stars {
+  grid-area: card-stars;
+
+}
  .rating {
+  grid-area: card-rating;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
