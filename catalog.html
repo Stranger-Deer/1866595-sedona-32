@@ -23,7 +23,7 @@
          </ul>
 
          <a class="navigation-logo" href="index.html">
-           <img class="logo" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
+           <img class="logo-html" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
          </a>
 
          <ul class="user-navigation">
@@ -38,7 +38,7 @@
               </a>
             </li>
             <li class="user-nav">
-              <a class="more-button button" href="catalog.html">Хочу сюда!</a>
+              <a class="want-button button" href="catalog.html">Хочу сюда!</a>
             </li>
           </ul>
       </nav>
@@ -137,7 +137,7 @@
 
           </fieldset>
           <div class="catalog-filter-buttons">
-            <button class="button" type="submit">Применить</button>
+            <button class="apply-button button" type="submit">Применить</button>
             <button class="button-light" type="submit">Сбросить</button>
           </div>
         </form>
@@ -158,17 +158,17 @@
 
       <ul class="sorting-view">
         <li class="sorting-icon">
-         <a href="#" class="icon-button button">
+         <a href="#" class="icon-button icon-card">
            <span class="visually-hidden">Показать карточки</span>
          </a>
        </li>
        <li class="sorting-icon">
-         <a href="#" class="icon-button button">
+         <a href="#" class="icon-button icon-slideshow">
           <span class="visually-hidden">Показать презентацию</span>
         </a>
       </li>
        <li class="sorting-icon">
-        <a href="#" class="icon-button button">
+        <a href="#" class="icon-button icon-list">
           <span class="visually-hidden">Показать список</span>
         </a>
        </li>
@@ -186,7 +186,12 @@
               <span class="product-card-price">от 4000 ₽</span>
               <a href="#" class="more-button button">Подробнее</a>
               <a href="#" class="favorites-button button">В избранное</a>
-            <img class="stars" src="#" alt="">
+            <div class="stars">
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+            </div>
             <p class="rating"> Рейтинг: 8,5</p>
           </li>
 
@@ -229,7 +234,9 @@
             <p class="rating"> Рейтинг: 9,2</p>
           </li>
       </ul>
+      <div class="load-space">
           <button class="button-load button" type="button">Загрузить ещё</button>
+      </div>
      </section>
 
      <div class="pagination-container">
@@ -269,7 +276,7 @@
                 <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                  <label for="newsletter-email">Ваш e-mail</label>
                     <input type="text" id="newsletter-email" name="email">
-                    <button class="button" type="submit">Подписаться</button>
+                    <button class="subscribe-button button" type="submit">Подписаться</button>
                   </form>
           </section>
     </main>
@@ -280,17 +287,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="social-icon button" href="#">
+            <a class="social-icon social-icon-tw" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="social-icon button" href="#">
+            <a class="social-icon social-icon-fb " href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="social-icon button" href="#">
+            <a class="social-icon social-icon-yu" href="https://www.youtube.com/c/HTMLAcademyRUS">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
@@ -304,7 +311,7 @@
 
       <section class="footer-html">
          <h2 class="visually-hidden">HTML Academy</h2>
-         <a href="#">
+         <a href="https://htmlacademy.ru/">
            <img class="logo" src="img/logo-htmlacademy.svg" alt="Логотип «HTML Academy»">
          </a>
       </section>
