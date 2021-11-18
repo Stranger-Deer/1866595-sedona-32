@@ -67,13 +67,14 @@ input {
 
 .e-mail:focus {
   background: #e5e5e5;
-  border: 3px color #83B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius:10px 0 0 10px;
+  outline: none;
 }
 
 .e-mail:active {
   background: #ffffff;
-  border: 3px color #000000;
+  box-shadow: inset 0 0 0 3px #000000;
   border-radius:10px 0 0 10px;
   color: #000000;
 }
@@ -107,6 +108,13 @@ input {
     padding: 15px 0;
 }
 
+.button-search:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+  background-color: #615048;
+}
+
 .subscribe-button{
   border-radius: 0 10px 10px 0;
   padding: 17px 34px ;
@@ -119,7 +127,7 @@ input {
 
 .subscribe-button:focus{
   background-color: #68A2CA;
-  border: 3px solid #756257;
+  box-shadow: inset 0 0 0 3px #756257;
   border-radius: 0 10px 10px 0;
 
 }
@@ -142,9 +150,10 @@ input {
   background-color: #615048;
 }
 
-.want-button:focus, .button-search:focus {
-  border: 3px solid #83B3D3;
+.want-button:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 4px;
+  outline: none;
   background-color: #615048;
 }
 
@@ -275,24 +284,38 @@ margin: 0;
 }
 
 .user-link {
-display: block;
+display: flex;
+justify-content: center;
+align-items: center;
 width: 38px;
 height: 38px;
 text-decoration: none;
 }
 
-.user-link, .user-icon:hover {
+.user-link, .user-icon:hover, .user-icon:focus, .navigation-link:hover {
   fill: #756257;
+  color: #756257;
 }
 
-.user-link:focus {
-  border: 3px solid #83B3D3;
-  border-radius: 4px;
+.user-link:focus, .navigation-link:focus  {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+  outline: none;
+  color: #756257;
 }
 
+.user-icon:active {
+  fill:#d6d0cd;
+}
+
+.user-link:active, .navigation-link:active{
+  box-shadow: inset 0 0 0 0 ;
+  color:#d6d0cd;
+}
 
 .user-icon{
   margin: 0px;
+  fill: #000000;
 }
 
 
@@ -522,6 +545,7 @@ text-transform: uppercase;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
   background-color: #FFFFFF;
   padding: 40px 72px 40px 72px;
 }
@@ -543,40 +567,29 @@ text-transform: uppercase;
   margin-right: 0;
 }
 
-.social-icon {
-  display: block;
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-
 }
 
-.social-icon:hover {
-  color:#68A2CA
+.social-icon {
+ fill: #83B3D3;
+}
+.social-icon:hover, .social-icon:focus  {
+  fill:#68A2CA
 }
 
-.social-icon:focus {
+.social-link:focus {
   color:#68A2CA  ;
-  border: 3px soid #83B3D3;
-  border-radius: 4px;
+  box-shadow: inset 0 0 0 3px #68A2CA;
+  border-radius: 10px;
 }
 
 .social-icon:active {
-  color:#D2E3EF
-}
-
- .social-icon-tw {
-   background-image: url("../img/social-twitter.svg");
- }
-
-.social-icon-fb {
-  background-image: url("../img/social-facebook.svg");
-}
-
-.social-icon-yu {
-  background-image: url("../img/social-youtube.svg");
+  fill:#D2E3EF
 }
 
 .footer-contacts{
@@ -591,21 +604,35 @@ text-transform: uppercase;
   background-color: #FFFFFF;
   text-align: center;
   text-decoration: none;
+  padding: 15px;
 }
 
+.html-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 33px;
+  padding: 19px 22px;
+}
+
+.logo-html{
+  fill: #000000;
+}
 .footer-contacts-item:hover, .logo-html:hover {
   color: #756257;
+  fill: #756257;
 }
 
-.footer-contacts-item:focus, .logo-html:focus {
+.footer-contacts-item:focus, .html-link:focus {
   color: #756257;
-  border: 3px solid #83B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 10px;
 }
 
 .footer-contacts-item:active, .logo-html:active{
-color: #D6D0CC;
-
+  color: #D6D0CC;
+  fill: #D6D0CC;
 }
 
 /* Catalog */
