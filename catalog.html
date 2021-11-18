@@ -5,10 +5,12 @@
       <title>Каталог</title>
       <link rel="stylesheet" href="styles/styles.css">
   </head>
-
   <body>
     <div class="container">
      <header class="page-header">
+       <a class="navigation-logo" href="index.html">
+         <img class="logo" src="img/logo-sedona.svg"  width="138" height="70" alt="Логотип «Седона»">
+       </a>
        <nav class="navigation">
          <ul class="navigation-list">
             <li class="navigation-item">
@@ -22,18 +24,25 @@
             </li>
          </ul>
 
-         <a class="navigation-logo" href="index.html">
-           <img class="logo-html" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип «Седона»">
-         </a>
-
          <ul class="user-navigation">
             <li class="user-nav">
               <a class="user-link" href="#">
+                <svg  class="user-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_27808_130)">
+                <path d="M18 16.5L14.3 12.8C15.3 11.5 16 9.8 16 7.9C16 3.5 12.4 -0.1 8 -0.1C3.6 -0.1 0 3.6 0 8C0 12.4 3.6 16 8 16C9.8 16 11.5 15.4 12.9 14.3L16.6 18L18 16.5ZM8 14C4.7 14 2 11.3 2 8C2 4.7 4.7 2 8 2C11.3 2 14 4.7 14 8C14 11.3 11.3 14 8 14Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_27808_130">
+                <rect width="18" height="18" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="user-nav">
               <a class="user-link" href="#">
+                <svg  class="user-icon" aria-hidden="true" focusable="false" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
                 <span class="visually-hidden">Избранное</span>
               </a>
             </li>
@@ -51,10 +60,26 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
                   <span class="visually-hidden">Главная</span>
+                  <svg class="breadcrumbs-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0L0 5.80006V12.0001H12V5.80006L6 0ZM11 11.0001H1V6.20005L6 1.4L11 6.20005V11.0001Z"/>
+                  <path d="M4 10.0001H5V7.50005H7V10.0001H8V6.50005H4V10.0001Z"/>
+                  </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы Седоны</a>
+                <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3" clip-path="url(#clip0_5_562)">
+                <path d="M4.8 3.60005L0.999999 0.200049C0.799999 4.88311e-05 0.399999 4.88311e-05 0.0999989 0.200049C-0.200001 0.400049 -0.100001 0.800049 0.0999989 1.00005L3.4 4.00005L0.199999 7.00005C-1.11759e-06 7.20005 -1.11759e-06 7.60005 0.199999 7.80005C0.199999 7.90005 0.499999 8.00005 0.599999 8.00005C0.699999 8.00005 0.899999 7.90005 0.999999 7.80005L4.8 4.40005C5.1 4.20005 5.1 3.80005 4.8 3.60005Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_5_562">
+                <rect width="5" height="8" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-hotels breadcrumbs-link">Гостиницы Седоны</a>
             </li>
         </ul>
       </header>
@@ -186,12 +211,12 @@
               <span class="product-card-price">от 4000 ₽</span>
               <a href="#" class="more-button button">Подробнее</a>
               <a href="#" class="favorites-button button">В избранное</a>
-            <div class="stars">
-              <span class="icon-star"></span>
-              <span class="icon-star"></span>
-              <span class="icon-star"></span>
-              <span class="icon-star"></span>
-            </div>
+              <ul class="stars">
+                <li class="icon-star"></li>
+                <li class="icon-star"></li>
+                <li class="icon-star"></li>
+                <li class="icon-star"></li>
+              </ul>
             <p class="rating"> Рейтинг: 8,5</p>
           </li>
 
@@ -204,7 +229,11 @@
             <span class="product-card-price">от 3000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
             <a href="#" class="favorites-button button">В избранное</a>
-            <img class="stars" src="#" alt="">
+            <ul class="stars">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+            </ul>
             <p class="rating"> Рейтинг: 8,9</p>
           </li>
 
@@ -217,7 +246,10 @@
             <span class="product-card-price">от 2000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
             <a href="#" class="favorites-button-active button">В избранном</a>
-            <img class="stars" src="#" alt="">
+            <ul class="stars">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+            </ul>
             <p class="rating"> Рейтинг: 9,2</p>
           </li>
 
@@ -230,7 +262,10 @@
             <span class="product-card-price">от 3000 ₽</span>
             <a href="#" class="more-button button">Подробнее</a>
             <a href="#" class="favorites-button button">В избранное</a>
-            <img class="stars" src="#" alt="">
+            <ul class="stars">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+            </ul>
             <p class="rating"> Рейтинг: 9,2</p>
           </li>
       </ul>
@@ -273,11 +308,13 @@
         <section class="newsletter-inner">
             <h2 class="newsletter-title-inner">Подпишитесь на рассылку</h2>
               <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-                <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-                 <label for="newsletter-email">Ваш e-mail</label>
-                    <input type="text" id="newsletter-email" name="email">
-                    <button class="subscribe-button button" type="submit">Подписаться</button>
-                  </form>
+              <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
+                <div class="newsletter-form-item">
+                  <input class="e-mail" type="text" placeholder="Ваш e-mail" id="newsletter-email" name="email">
+                  <button class="subscribe-button button" type="submit">Подписаться</button>
+                </div>
+              </form>
           </section>
     </main>
 
@@ -287,18 +324,23 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="social-icon social-icon-tw" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-link" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Твиттер</span>
+              <svg class="social-icon" width="18" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M11.6.2c1.8-.5 3.2.3 3.8 1.2.7-.2 1.4-.5 2.1-.7 0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6-.2 1-1.1 1.8-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 5.6-.2 2.5.9.9c1.9 1.9 4 3.6 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z"/></g><defs><clipPath id="a"><path d="M0 0h18v15H0z"/></clipPath></defs></svg>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="social-icon social-icon-fb " href="https://www.facebook.com/htmlacademy">
+            <a class="social-link" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Фейсбук</span>
+              <svg class="social-icon" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C4.8 0 3 1.8 3 4V6H0V10H3V18H7V10H10V6H7V4H10V0H7Z"/></svg>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="social-icon social-icon-yu" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
               <span class="visually-hidden">Ютуб</span>
+              <svg class="social-icon" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.95 0H3.84995C2.14995 0 0.949951 1.5 0.949951 3.2V12.7C0.949951 14.5 2.14995 16 3.84995 16H18.15C19.65 16 21.05 14.5 21.05 12.8V3.2C20.85 1.5 19.65 0 17.95 0ZM7.94995 11.8V4.2L14.65 8L7.94995 11.8Z"/>
+              </svg>
             </a>
           </li>
         </ul>
@@ -311,12 +353,25 @@
 
       <section class="footer-html">
          <h2 class="visually-hidden">HTML Academy</h2>
-         <a href="https://htmlacademy.ru/">
-           <img class="logo" src="img/logo-htmlacademy.svg" alt="Логотип «HTML Academy»">
+         <a  class="html-link" href="https://htmlacademy.ru/">
+           <svg class="logo-html" width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M0 12.9V15.5H2.5V12.9H0Z"/>
+           <path d="M11.6 4.5C10 4.5 8.80002 5.2 8.00002 6.2H7.90002V0H5.90002V15.5H7.90002V10.2C7.90002 8.1 9.20002 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z"/>
+           <path d="M26.6 4.79998H21.8V1.09998H19.8V4.89998H17.9V6.89998H19.8V12.9C19.8 14.6 20.8 15.6 22.5 15.6H26.6V13.6H22.9C22.2 13.6 21.8 13.2 21.8 12.5V6.79998H26.6V4.79998Z"/>
+           <path d="M41.1 4.59998C39.5 4.59998 38.2 5.39998 37.6 6.69998H37.5C36.9 5.49998 35.7 4.59998 34.1 4.59998C32.7 4.59998 31.6 5.39998 31 6.39998H30.9V4.79998H29V15.4H31V9.99998C31 7.99998 32 6.49998 33.6 6.49998C35.1 6.49998 36 7.49998 36 9.09998V15.4H38V9.79998C38 7.39998 39.4 6.49998 40.6 6.49998C42.1 6.49998 43 7.49998 43 9.09998V15.4H45V8.89998C45.1 6.39998 43.6 4.59998 41.1 4.59998Z"/>
+           <path d="M47.8 12.7C47.8 14.4 48.8 15.4 50.6 15.4H52.6V13.4H50.9001C50.2001 13.4 49.8 13 49.8 12.3V0H47.8V12.7Z"/>
+           <path d="M28.9 19.7C28 18.6 26.7 17.9 25 17.9C21.9 17.9 19.6 20.2 19.6 23.5C19.6 26.8 21.9 29.1 25 29.1C26.8 29.1 28 28.3 28.8 27.2H28.9V28.8H30.9V18.2H28.9V19.7ZM25.3 27.1C23.1 27.1 21.7 25.5 21.7 23.5C21.7 21.5 23.1 19.9 25.3 19.9C27.5 19.9 28.9 21.5 28.9 23.5C28.9 25.4 27.5 27.1 25.3 27.1Z"/>
+           <path d="M44.2 22C43.7 19.6 41.5999 17.9 38.7999 17.9C35.3999 17.9 33.2 20.4 33.2 23.5C33.2 26.6 35.3999 29.1 38.7999 29.1C41.5999 29.1 43.7 27.3 44.2 24.9H42.0999C41.6999 26.2 40.3999 27.2 38.7999 27.2C36.5999 27.2 35.2 25.6 35.2 23.6C35.2 21.6 36.5999 20 38.7999 20C40.3999 20 41.5999 21 42.0999 22.2H44.2V22Z"/>
+           <path d="M55.1 19.7C54.2 18.6 52.9001 17.9 51.2001 17.9C48.1001 17.9 45.8 20.2 45.8 23.5C45.8 26.8 48.1001 29.1 51.2001 29.1C53.0001 29.1 54.2 28.3 55 27.2H55.1V28.8H57.1V18.2H55.1V19.7ZM51.5 27.1C49.3 27.1 47.9001 25.5 47.9001 23.5C47.9001 21.5 49.3 19.9 51.5 19.9C53.7 19.9 55.1 21.5 55.1 23.5C55.1 25.4 53.6 27.1 51.5 27.1Z"/>
+           <path d="M68.7 19.8C67.8 18.7 66.5 17.9 64.8 17.9C61.7 17.9 59.4 20.2 59.4 23.5C59.4 26.8 61.6 29.1 64.8 29.1C66.5 29.1 67.8 28.3 68.6 27.3H68.7V28.8H70.7V13.4H68.7V19.8ZM65.1 27.1C62.9 27.1 61.5 25.5 61.5 23.5C61.5 21.5 62.9 19.9 65.1 19.9C67.3 19.9 68.7 21.5 68.7 23.5C68.6 25.5 67.2 27.1 65.1 27.1Z"/>
+           <path d="M78.3 17.9C75 17.9 72.8 20.4 72.8 23.5C72.8 26.5 74.9 29.1 78.3 29.1C80.8 29.1 82.8 27.8 83.5 25.5H81.4C80.9 26.5 79.8 27.1 78.4 27.1C76.5 27.1 75.1 25.8 75 24.2H83.8C84 20.6 81.8 17.9 78.3 17.9ZM78.3 19.8C80 19.8 81.3 20.8 81.6 22.4H75.1C75.4 20.9 76.6 19.8 78.3 19.8Z"/>
+           <path d="M98.2 17.9C96.6 17.9 95.3 18.7 94.6 19.9H94.5C93.9 18.7 92.7 17.9 91.1 17.9C89.7 17.9 88.6 18.6 88 19.7V18.2H86.1V28.8H88.1V23.4C88.1 21.4 89.1 20 90.7 19.9C92.2 19.9 93.1 20.9 93.1 22.5V28.8H95.1V23.2C95.1 20.8 96.5 19.9 97.7 19.9C99.2 19.9 100.1 20.9 100.1 22.5V28.8H102.1V22.3C102.2 19.7 100.7 17.9 98.2 17.9Z"/>
+           <path d="M109.4 27L105.8 18.1H103.6L108.4 29.7C108.1 30.6 107.7 30.9 106.7 30.9H104.2V32.9H106.7C108.5 32.9 109.5 32.1 110.2 30.3L114.9 18.1H112.8L109.4 27Z"/>
+           </svg>
+
          </a>
       </section>
-
     </footer>
-  </div>
+    </div>
  </body>
-</html>
+ </html>

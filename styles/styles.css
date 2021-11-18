@@ -121,7 +121,7 @@ input {
   width: 200px;
 }
 
-.subscribe-button:hover{
+.subscribe-button:hover, .apply-button:hover, .favorites-button:hover{
   background-color: #68A2CA;
 }
 
@@ -132,7 +132,14 @@ input {
 
 }
 
-.subscribe-button:active{
+.apply-button:focus{
+    background-color: #68A2CA;
+    box-shadow: inset 0 0 0 3px #FFFFFF;
+    border-radius: 4px;
+}
+
+.subscribe-button:active,.apply-button:active, .favorites-button:active{
+  box-shadow: none;
   background-color: #68A2CA;
   color: #95BEDA;
 }
@@ -146,18 +153,19 @@ input {
   padding: 9px 34px;
 }
 
-.want-button:hover, .button-search:hover {
+.want-button:hover, .button-search:hover,.more-button:hover {
   background-color: #615048;
 }
 
-.want-button:focus {
+.want-button:focus, .more-button:focus {
   box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 4px;
   outline: none;
   background-color: #615048;
 }
 
-.want-button:active ,.button-search:active {
+.want-button:active ,.button-search:active, .more-button:active {
+  box-shadow: none;
   color: #90847F;
   background-color:#615048;
 }
@@ -178,7 +186,12 @@ input {
   line-height: 21px;
   text-align: center;
   padding: 9px 0;
+}
 
+.favorites-button:focus{
+  background-color: #68A2CA;
+  box-shadow: inset 0 0 0 3px #756257;
+  border-radius:4px;
 }
 
 .favorites-button-active {
@@ -189,12 +202,30 @@ input {
   padding: 9px 0;
 }
 
+.favorites-button-active:hover{
+  background-color: #6C9E42;
+
+}
+
+.favorites-button-active:focus{
+  background-color: #6C9E42;
+  box-shadow: inset 0 0 0 3px #756257;
+  border-radius:4px;
+}
+
+.favorites-button-active:active{
+  color: #98BB7B;
+  background-color: #6C9E42;
+  box-shadow: none;
+}
+
 
 .apply-button{
   font-size: 16px;
   line-height: 21px;
   padding: 13px 34px;
 }
+
 
 .button-light {
   font-family: inherit;
@@ -205,6 +236,23 @@ input {
   line-height: 23px;
   text-align: center;
   cursor: pointer;
+  padding: 5px 14px;
+}
+
+.button-light:hover, .breadcrumbs-link:hover, .breadcrumbs-icon:hover{
+  opacity: 60%;
+}
+
+.button-light:focus,.breadcrumbs-link:focus,.breadcrumbs-icon:focus{
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.button-light:active,.breadcrumbs-link:active, .breadcrumbs-icon:active{
+  box-shadow: none;
+  opacity: 30%;
+
 }
 
 h2 {
@@ -248,6 +296,7 @@ margin: 0;
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
+  align-items: center;
   margin: 0;
 }
 
@@ -292,12 +341,12 @@ height: 38px;
 text-decoration: none;
 }
 
-.user-link, .user-icon:hover, .user-icon:focus, .navigation-link:hover {
+.user-link, .user-icon:hover, .user-icon:focus, .navigation-link:hover,.product-card-title:hover {
   fill: #756257;
   color: #756257;
 }
 
-.user-link:focus, .navigation-link:focus  {
+.user-link:focus, .navigation-link:focus, .product-card-title:focus  {
   box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 10px;
   outline: none;
@@ -308,7 +357,7 @@ text-decoration: none;
   fill:#d6d0cd;
 }
 
-.user-link:active, .navigation-link:active{
+.user-link:active, .navigation-link:active, .product-card-title:active{
   box-shadow: inset 0 0 0 0 ;
   color:#d6d0cd;
 }
@@ -317,8 +366,6 @@ text-decoration: none;
   margin: 0px;
   fill: #000000;
 }
-
-
 
 .main-container {
   flex-grow: 1;
@@ -588,6 +635,10 @@ text-transform: uppercase;
   border-radius: 10px;
 }
 
+.social-link:active{
+  box-shadow: none;
+}
+
 .social-icon:active {
   fill:#D2E3EF
 }
@@ -630,7 +681,8 @@ text-transform: uppercase;
   border-radius: 10px;
 }
 
-.footer-contacts-item:active, .logo-html:active{
+.footer-contacts-item:active, .logo-html:active, .html-link:active{
+  box-shadow: none;
   color: #D6D0CC;
   fill: #D6D0CC;
 }
@@ -660,9 +712,16 @@ margin: 0;
 }
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   list-style: none;
   margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.breadcrumbs-item{
+  margin-right: 11px;
 }
 
 .breadcrumbs-link {
@@ -670,6 +729,12 @@ margin: 0;
   display: flex;
   margin: 0;
   padding: 0;
+
+}
+
+
+.breadcrumbs-icon{
+  fill: #FFFFFF;
 }
 
 .filters{
@@ -681,16 +746,8 @@ padding: 0 72px 83px 72px;
   display: flex;
   justify-content: space-between;
   list-style: none;
-
 }
 
-.catalog-filter-infrastruction {
-
-}
-
-.catalog-filter-housing {
-
-}
 
 .catalog-filter-price{
   width: 278px;
@@ -759,10 +816,23 @@ padding: 0 72px 83px 72px;
   display: block;
   width: 48px;
   height: 48px;
+  box-shadow: inset 0 0 0 3px #E5E5E5;
   border-radius: 4px;
-  border: 2px solid #E5E5E5;
+  outline: none;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.icon-button:hover, .icon-button:focus{
+  box-shadow:inset 0 0 0 3px #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.icon-button:active {
+  box-shadow:inset 0 0 0 3px #000000;
+  border-radius: 4px;
+  outline: none;
 }
 
 .icon-card {
@@ -802,10 +872,25 @@ padding: 0 72px 83px 72px;
   text-decoration: none;
 }
 
+
 .product-card-image {
   grid-area: card-image;
 }
 
+
+.product-card-image:hover{
+  opacity: 60%;
+}
+
+
+.product-card-image:focus{
+  opacity: 60%;
+}
+
+
+.product-card-image:active{
+  opacity: 30%;
+}
 
 .product-card-title {
   grid-area: card-title;
@@ -839,11 +924,22 @@ padding: 0 72px 83px 72px;
 
 .stars {
   grid-area: card-stars;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.icon-stars {
-background-image: url("../img/star.svg");
+.icon-star {
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 17px;
+  margin-left: 7px;
 }
  .rating {
   grid-area: card-rating;
@@ -905,6 +1001,22 @@ background-image: url("../img/star.svg");
    font-size: 20px;
    font-weight: 700;
  }
+
+  .pagination-link:hover {
+    background-color: #68A2CA;
+  }
+
+  .pagination-link:focus {
+    background-color: #68A2CA;
+    box-shadow: inset 0 0 0 3px #756257;
+    border-radius:4px;
+  }
+
+  .pagination-link:active {
+    box-shadow: none;
+    background-color: #68A2CA;
+    color: #95BEDA;
+  }
 
  .pagination-current {
    color: #000000;
